@@ -3,6 +3,7 @@
     $.fn.result = function(options) {
         var settings = $.extend({
             passmarks: 33,
+            success: null
         }, options);
 
         return this.each(function() {
@@ -35,6 +36,17 @@
             }
 
             $this.text("Mark: " + mark + ", Grade: " + grade + ", Point: " + point);
+
+            if($.isFunction(settings.success)) {
+                var result = {
+                    mark: mark,
+                    grade: grade,
+                    point: point
+                };
+
+                // console.log(result);
+                settings.success.call(this, result);
+            }
         });
     }
 

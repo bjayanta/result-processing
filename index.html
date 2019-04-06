@@ -25,7 +25,12 @@
     <script type="text/javascript" src="js/process.js"></script>
 
     <script type="text/javascript">
-        $('div#result p').result();
+        $('div#result p').result({
+            passmarks: 40,
+            success: function(response) {
+                console.log(response.point);
+            }
+        });
     </script>
 
 </body>
