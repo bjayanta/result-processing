@@ -1,4 +1,5 @@
 # Result processing system
+This jQuery plugin able to calculate *Grade* and *Point* from given marks. 
 
 ## Dependance
 * [jQuery](https://code.jquery.com/jquery-3.3.1.slim.min.js) 
@@ -32,7 +33,7 @@ $('div#result p').calculateResult();
 | grades    | Array type (*String*)        | ['A+', 'A', 'A-', 'B', 'C', 'D']           |
 | points    | Array type (*Float*)         | [5.00, 4.00, 3.50, 3.00, 2.00, 1.00, 0.00] |
 | passmarks | Integer                      | 33                                         |
-| success   | Function with response param  | null                                       |
+| success   | Function with response param. This *response* param hold the total result data (grade, point and marks) | null                                       |
 
 
 Thanks
