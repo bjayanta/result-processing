@@ -25,10 +25,14 @@
     <script type="text/javascript" src="js/process.js"></script>
 
     <script type="text/javascript">
-        $('div#result p').result({
+        $('div#result p').calculateResult({
             passmarks: 40,
             success: function(response) {
-                console.log(response.point);
+                var result = response,
+                    mark = response.mark;
+
+                console.log(response);
+                console.log(mark + 10);
             }
         });
     </script>
